@@ -1,0 +1,51 @@
+<!-- Programa para calcular los puntos de fut bol
+
+    aprende a convertir texto a numero 
+
+-->
+
+<script>
+  //Funcion para agregar utf y titulo en el programa
+  function html() {
+    document.write('<meta charset="UTF-8">');
+    //Titulo del programa o pagina
+    document.write('<h2> Puntos de un equipo de futbol </h2> ');
+  }
+
+  //funcion para imprimir mensaje
+  function imprimir(frase) {
+    document.write(frase);
+    document.write('<br><br>');
+  }
+
+  //Crear funcion para salto de linea
+  function saltarlinea() {
+    document.write('<br> <br> ');
+  }
+
+  //Funcion con parametros
+  function fut( ganados, empate, pasado, nombre) {
+
+    var puntos = ganados * 3 + empate;
+
+    if(puntos>pasado){
+        imprimir("los "+nombre+" obtuvieron "+puntos+ " puntos en el torneo, el equipo mejoró");
+    }
+    if(puntos<pasado){
+        imprimir("los "+nombre+" obtuvieron "+puntos+ " puntos en el torneo, el equipo empeoró");
+    }
+    if(puntos==pasado){
+        imprimir("los "+nombre+" obtuvieron "+puntos+ " puntos en el torneo, el equipo sigue igual");
+    }
+    
+  }
+  html(); //Ejecutando la funcion de html
+
+  var nom = prompt('Dame el nombre del equipo: ');
+  var pasado  = parseInt(prompt("Cuantos puntos obtivieron el torneo pasado: ") );
+  var win = parseInt(prompt('Ingresa el numero de victorias de este torneo: '));
+  var emp = parseInt(prompt('Ingresa el numero de empates de este torneo: '));
+
+  fut(win,emp,pasado,nom);
+
+</script>

@@ -1,0 +1,37 @@
+<!-- Juego secreto   -->
+
+<meta charset="UTF-8">
+
+<input/>
+<button>Verificar si acertaste</button>
+
+
+<!-- CODIGO DE JAVA SCRIPT -->
+<script>
+    //generando el numero secreto aleatoriamente 
+    var secreto= Math.round(Math.random()*10);
+    //tomando el valor del input
+    var input = document.querySelector("input");
+    //enfocar el cursor en el elemento de input 
+    input.focus();
+
+
+    function Verificar()
+    {
+        if (parseInt(input.value) == secreto){
+            alert("Usted Acerto");
+        }
+        else{
+            alert("Error");
+        }
+
+        //limpiar la casilla de input 
+        input.value= "";
+        //volver enfocar el cursor en el input
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = Verificar;
+
+</script>

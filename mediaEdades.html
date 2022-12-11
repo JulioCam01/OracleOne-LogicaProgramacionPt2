@@ -1,0 +1,53 @@
+<!-- CICLOS 
+    Programa para sacar la media de las edades de la familia 
+    promedio = suma de las edades / cantidad 
+-->
+
+
+<script>
+    //Funcion para agregar utf y titulo en el programa
+    function html() {
+      document.write('<meta charset="UTF-8">');
+      //Titulo del programa o pagina
+      document.write('<h2> Media de edades de una familia  </h2> ');
+    }
+  
+    //funcion para imprimir mensaje
+    function imprimir(frase) {
+      document.write(frase);
+      document.write('<br><br>');
+    }
+  
+    //Crear funcion para salto de linea
+    function saltarlinea() {
+      document.write('<br> <br> ');
+    }
+  
+
+    function media(){
+        
+        //pedir los miembros 
+        var miembros= parseInt(prompt("Cuantos integrantes son en tu familia"));
+        var contador = 1;
+        var totaledades= 0; 
+
+        while(contador<=miembros){
+
+            edad = parseInt(prompt("Dame la edad del "+contador+ " miembro de la familia"));
+            totaledades = totaledades + edad;
+            contador++;
+        }
+        imprimir("FIN DEL CICLO");
+
+        var prom = totaledades / miembros;
+        imprimir("El promedio de edades de la familia es "+prom);
+        
+        
+    }
+
+    media(); //realizar la funcion
+
+
+
+  </script>
+  

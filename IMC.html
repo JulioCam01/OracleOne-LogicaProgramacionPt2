@@ -1,0 +1,63 @@
+<!-- PROGRAMA PARA CALCULAR EL IMC 
+peso / altura2
+
+-->
+
+<script>
+    //Funcion para agregar utf y titulo en el programa
+    function html(){
+        document.write('<meta charset="UTF-8">')
+        //Titulo del programa o pagina 
+        document.write('<h2> CALCULADORA IMC </h2> ')
+    }
+
+    //funcion para imprimir mensaje
+    function imprimir(frase){
+        document.write(frase);
+        document.write("<br><br>");
+    }
+
+    //Crear funcion para salto de linea 
+    function saltarlinea(){
+        document.write("<br> <br> ");
+    } 
+
+    //Funcion con parametros 
+    function IMC(peso,altura,nombre){ 
+
+        imc = peso / (altura* altura);
+
+       imprimir("El indice de masa corporal de " +nombre+ " es de: "+imc);
+
+       if(imc<18.5){
+            imprimir("IMC abajo de lo recomendado");
+       }
+       if(imc>=18.5){
+            if(imc<25){
+                imprimir("IMC normal");
+            }
+       }
+       if(imc>=25){
+            if(imc<30){
+                imprimir("IMC considerado como sobrepeso");
+            }
+       }
+       if(imc>=30){
+            imprimir("IMC considerado como obesidad");
+       }
+    }
+
+    html() //Ejecutando la funcion de html 
+
+    
+    nom= prompt("Dame tu nombre: ");
+    peso= prompt("Dame tu peso: ");
+    alt= prompt("Dame tu altura: ");
+
+    IMC(peso,alt,nom); //ejecutando la funcion de diferencia de edad
+
+
+    //IMC(75,1.70,"Carlos"); //ejecutando la funcion de diferencia de edad
+
+
+</script>

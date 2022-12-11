@@ -1,0 +1,47 @@
+<!-- PROGRAMA PARA CALCULAR EL IMC 
+peso / altura2
+
+-->
+
+<script>
+    //Funcion para agregar utf y titulo en el programa
+    function html(){
+        document.write('<meta charset="UTF-8">')
+        //Titulo del programa o pagina 
+        document.write('<h2> ADIVINA EL NUMERO </h2> ')
+    }
+
+    //funcion para imprimir mensaje
+    function imprimir(frase){
+        document.write(frase);
+        document.write("<br><br>");
+    }
+
+    //Crear funcion para salto de linea 
+    function saltarlinea(){
+        document.write("<br> <br> ");
+    } 
+
+    //Funcion con parametros 
+    function adivina(numPen,numLanz){ 
+
+        if(numPen == numLanz){
+            imprimir("Adivinaste el numero");
+        }
+        else{ // no podemos ahorrar esta condicion gracias al else if(numPen != numLanz)
+            imprimir("Error, el numero a adivinar era: "+numPen);
+        }
+
+
+
+    }
+
+    html() //Ejecutando la funcion de html 
+
+    var numeroPensado= Math.round(Math.random()*10); 
+    var numeroLanzado = parseInt(prompt("Dame un numero: entre 0 - 10"));
+    
+    adivina(numeroPensado, numeroLanzado);
+
+
+</script>

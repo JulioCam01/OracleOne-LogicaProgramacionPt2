@@ -1,0 +1,46 @@
+<!-- CICLOS 
+    PROGRAMA PARA sacar los numeros pares que existen del 1 al 100
+-->
+
+
+<script>
+    //Funcion para agregar utf y titulo en el programa
+    function html() {
+      document.write('<meta charset="UTF-8">');
+      //Titulo del programa o pagina
+      document.write('<h2> NUMEROS PARES DEL 1 AL 1OO </h2> ');
+    }
+  
+    //funcion para imprimir mensaje
+    function imprimir(frase) {
+      document.write(frase);
+      document.write('<br><br>');
+    }
+  
+    //Crear funcion para salto de linea
+    function saltarlinea() {
+      document.write('<br> <br> ');
+    }
+  
+
+    function pares(){
+        
+        var contador = 1;
+
+        while(contador <= 100){
+
+            //condicion para saber si es numero par 
+            if (contador%2 == 0){
+                imprimir(contador); //imprimir el numero par
+            }
+            contador++; //aumentar el contador 
+        }
+        
+    }
+
+    pares(); //realizar la funcion
+
+
+
+  </script>
+  

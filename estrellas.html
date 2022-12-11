@@ -1,0 +1,39 @@
+<!-- PROGRAMA PARA CALCULAR EL IMC 
+    ADIVINA EL NUMERO PENSADO
+
+-->
+
+<script>
+  //Funcion para agregar utf y titulo en el programa
+  function html() {
+    document.write('<meta charset="UTF-8">');
+    //Titulo del programa o pagina
+    document.write('<h2> Estrellitas </h2> ');
+  }
+
+  //funcion para imprimir mensaje
+  function imprimir(frase) {
+    document.write(frase);
+  }
+
+  //Crear funcion para salto de linea
+  function saltarlinea() {
+    document.write('<br> ');
+  }
+
+  //Funcion con parametros
+  function estrellas() {
+    for (var lineas = 1; lineas <= 3; lineas++) {
+
+        for(var columna =1; columna<=10; columna++){
+            imprimir("*");
+        }
+        saltarlinea();
+    }
+    saltarlinea();
+    imprimir("FIN")
+  }
+
+  html(); //Ejecutando la funcion de html
+  estrellas();
+</script>

@@ -1,0 +1,46 @@
+<!-- CICLOS 
+    PROGRAMA PARA SABER CUANTOS MUNDIALES HUBO
+-->
+
+
+<script>
+    //Funcion para agregar utf y titulo en el programa
+    function html() {
+      document.write('<meta charset="UTF-8">');
+      //Titulo del programa o pagina
+      document.write('<h2> AÑO MUNDIAL FIFA</h2> ');
+    }
+  
+    //funcion para imprimir mensaje
+    function imprimir(frase) {
+      document.write(frase);
+      document.write('<br><br>');
+    }
+  
+    //Crear funcion para salto de linea
+    function saltarlinea() {
+      document.write('<br> <br> ');
+    }
+  
+
+    function mundial(){
+        var primerMundial = 1930;
+
+        var limite= parseInt(prompt("Dame el año limite para calcular"));
+
+        //mientras se cumpla la condicion hara el codigo 
+        while(primerMundial <= limite){
+            //codigo a realizar 
+            imprimir("Hubo mundial de la FIFA en el año "+primerMundial);
+            //incrementar la variable para que avance el ciclo 
+            primerMundial = primerMundial + 4;
+        }
+        imprimir("Fin");
+    }
+
+    mundial();
+
+
+
+  </script>
+  

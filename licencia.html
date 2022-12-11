@@ -1,0 +1,66 @@
+<!-- PARA DECIR SI YA PUEDE CONDUCIR 
+
+-->
+
+<script>
+  //Funcion para agregar utf y titulo en el programa
+  function html() {
+    document.write('<meta charset="UTF-8">');
+    //Titulo del programa o pagina
+    document.write('<h2> ADIVINA EL NUMERO </h2> ');
+  }
+
+  //funcion para imprimir mensaje
+  function imprimir(frase) {
+    document.write(frase);
+    document.write('<br><br>');
+  }
+
+  //Crear funcion para salto de linea
+  function saltarlinea() {
+    document.write('<br> <br> ');
+  }
+
+  //Funcion con parametros
+  function conducir(edad, nombre) {
+    if (edad >= 18) {
+      imprimir(nombre + ' Ya puedes conducir ');
+    } else {
+      // no podemos ahorrar esta condicion gracias al else if(numPen != numLanz)
+      imprimir(nombre + ' Todavia no puedes conducir');
+    }
+  }
+
+  html(); //Ejecutando la funcion de html
+
+  var nom = prompt('Dame tu nombre');
+  var edad = parseInt(prompt('Dame tu edad'));
+
+  conducir(edad, nom);
+</script>
+
+
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if((edad >= 18) && (tieneLicencia == "S")) {
+            imprimir("Puedes conducir");
+        }
+
+    else {
+        imprimir("No puedes conducir");
+    }
+
+</script>
